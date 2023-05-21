@@ -1,11 +1,11 @@
 n=int(input())
 while(n>9):
-    temp=n;
-    s=0;
-    while(temp):
-        s+=temp%10;
-        temp//=10;
-    n=s
-print(n)
-
-    
+    s=n
+    su=0
+    while(s):
+        r=s%10
+        su=su+r
+        s=s//10
+    n=su
+print(n)      
+        
