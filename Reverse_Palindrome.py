@@ -1,30 +1,12 @@
-
-def ispalindrome(n : int) -> bool :
-    rev = 0
-    temp = n
-    while n != 0 :
-        rem = n % 10
-        rev = rev * 10 + rem
-        n //= 10
-    if temp == rev :
-        return True
-    else :
-        return False
-
-def reverse(n : int) -> int :
-    rev = 0
-    while n != 0 :
-        rem = n % 10
-        rev = rev * 10 + rem
-        n //= 10
-    return rev
-    
-    
-
-n = int(input())
-while True :
-    a = reverse(n)
-    n = a + n
-    if ispalindrome(n) :
-        print(n)
-        break
+def palindrome(n):
+    x=int(str(n)[::-1])
+    if(n==x):return 1
+    else:return 0
+def add(n):
+    a=int(str(n)[::-1])
+    b=n+a
+    if(palindrome(b)==1):
+        print(b)
+    else:add(b)
+n=int(input())
+add(n)
