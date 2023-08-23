@@ -1,9 +1,7 @@
 n=int(input())
-a=list(map(int,input().split()))
-for i in a:
+for i in list(map(int,input().split())):
     if i>=0:
         print(len(str(i)),end=" ")
-    else:
+    elif i<0:
         i=i*-1
         print(len(str(i)),end=" ")
-    
