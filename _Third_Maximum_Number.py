@@ -1,0 +1,8 @@
+n=int(input())
+a=list(map(int,input().split()))
+s=list(set(a))
+s.sort()
+l=len(s)
+if l<=1:print(*s)
+elif l==2:print(s[-1])
+else:print(s[-3])
